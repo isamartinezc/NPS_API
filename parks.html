@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>National Sites</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+    
+    <section class="background-image"> </section>
+      <h1>The U.S. National Sites</h1>
+      <h2 id="subhead">
+        <span class="bold"> Welcome! </span> If you're interested in learning about the
+        national parks, monuments, and facilities in the USA, you've come to the right place! All the data for this website was gathered from the <a href="https://www.nps.gov/subjects/developer/api-documentation.htm" target=”_blank”>National Park Service API</a>. To get started, browse through all the sites or select
+        the state you are interested in exploring!
+      </h2>
+
+      <select name="astate" id="astate" onchange="getState(this.value)">
+        <option value="">Select a State</option>
+      </select>
+      <br />
+      <!-- the background-cover is the white background behind the list of parks -->
+     
+      <section id="background-cover">
+        <div id="allParks"></div>
+        <div id="parks"></div>
+      </section>
+    </main>
+  </body>
+</html>
+
+<script src="parks.js"></script>
+<script
+    src="https://kit.fontawesome.com/26cc3e7d76.js"
+    crossorigin="anonymous"
+  ></script>
+
